@@ -130,32 +130,32 @@ g6dxlarge_instance = Instance(
     gpu_num=1,
     vcpu=4,
     memory=16,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 g6d2xlarge_instance = Instance(
     instance_type=InstanceType.G6d2XLARGE,
     gpu_num=1,
     vcpu=8,
     memory=32,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 g6d4xlarge_instance = Instance(
     instance_type=InstanceType.G6d4XLARGE,
     gpu_num=1,
     vcpu=16,
     memory=64,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 g6d8xlarge_instance = Instance(
     instance_type=InstanceType.G6d8XLARGE,
     gpu_num=1,
     vcpu=32,
     memory=128,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 
 g6d12xlarge_instance = Instance(
@@ -163,24 +163,24 @@ g6d12xlarge_instance = Instance(
     gpu_num=4,
     vcpu=48,
     memory=192,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 g6d16xlarge_instance = Instance(
     instance_type=InstanceType.G6d16XLARGE,
     gpu_num=1,
     vcpu=64,
     memory=256,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 g6d24xlarge_instance = Instance(
     instance_type=InstanceType.G6d24XLARGE,
     gpu_num=4,
     vcpu=96,
     memory=384,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 
 g6d48xlarge_instance = Instance(
@@ -188,8 +188,8 @@ g6d48xlarge_instance = Instance(
     vcpu=192,
     memory=768,
     instance_type=InstanceType.G6d48XLARGE,
-    description="Amazon EC2 G5 instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton5 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6 instances are powered by NVIDIA L4 Tensor Core GPUs and provide cost-effective GPU instances for machine learning inference and graphics workloads.",
+    support_cn_region=True
 )
 
 g6exlarge_instance = Instance(
@@ -197,8 +197,8 @@ g6exlarge_instance = Instance(
     gpu_num=1,
     vcpu=4,
     memory=32,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 
 
@@ -207,8 +207,8 @@ g6e2xlarge_instance = Instance(
     gpu_num=1,
     vcpu=8,
     memory=64,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 
 g6e4xlarge_instance = Instance(
@@ -216,8 +216,8 @@ g6e4xlarge_instance = Instance(
     gpu_num=1,
     vcpu=16,
     memory=128,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 
 g6e8xlarge_instance = Instance(
@@ -225,8 +225,8 @@ g6e8xlarge_instance = Instance(
     gpu_num=1,
     vcpu=32,
     memory=256,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 
 g6e16xlarge_instance = Instance(
@@ -234,16 +234,16 @@ g6e16xlarge_instance = Instance(
     gpu_num=1,
     vcpu=64,
     memory=512,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 g6e12xlarge_instance = Instance(
     instance_type=InstanceType.G6e12XLARGE,
     gpu_num=4,
     vcpu=48,
     memory=384,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 
 g6e24xlarge_instance = Instance(
@@ -251,8 +251,8 @@ g6e24xlarge_instance = Instance(
     gpu_num=4,
     vcpu=96,
     memory=768,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 
 g6e48xlarge_instance = Instance(
@@ -260,8 +260,8 @@ g6e48xlarge_instance = Instance(
     gpu_num=8,
     vcpu=192,
     memory=1536,
-    description="Amazon EC2 G6e instances are powered by the latest generation of Amazon GPU-optimized processors, the AWS Graviton6 processors.",
-    support_cn_region=False
+    description="Amazon EC2 G6e instances are powered by NVIDIA L40S Tensor Core GPUs and provide high-performance GPU instances for ML training, generative AI, and HPC workloads.",
+    support_cn_region=True
 )
 
 
