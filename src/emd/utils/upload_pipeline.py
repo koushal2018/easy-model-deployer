@@ -15,28 +15,36 @@ emd_package_dir = os.path.dirname(spec.origin)
 def ziped_pipeline():
     zip_buffer = io.BytesIO()
     with zipfile.ZipFile(zip_buffer, 'a', zipfile.ZIP_DEFLATED) as zipf:
-        # Add pipeline folder
-        pipeline_dir = os.path.join(emd_package_dir,'pipeline')
-        for root, dirs, files in os.walk(pipeline_dir):
-            for file in files:
-                file_path = os.path.join(root, file)
-                arcname = os.path.relpath(file_path, emd_package_dir)
-                if arcname.startswith("emd_models") \
-                   or ("artifacts" in arcname and "deploy" in arcname) \
-                   or "__pycache__" in arcname:
-                    continue
-                zipf.write(file_path, arcname)
-        # add models into pipelines
+        # Add pipeline folder files directly (requirements.txt, pipeline.py, etc.)
+        pipeline_dir = os.path.join(emd_package_dir, 'pipeline')
+        if os.path.exists(pipeline_dir):
+            for root, dirs, files in os.walk(pipeline_dir):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    # Create archive path relative to pipeline directory
+                    arcname = os.path.relpath(file_path, pipeline_dir)
+                    # Skip unwanted files
+                    if ("artifacts" in arcname and "deploy" in arcname) \
+                       or "__pycache__" in arcname:
+                        continue
+                    # Add to pipeline/ directory in zip
+                    zip_arcname = os.path.join("pipeline", arcname)
+                    zipf.write(file_path, zip_arcname)
+        
+        # Add EMD source code into pipeline/emd/
         for root, dirs, files in os.walk(emd_package_dir):
             for file in files:
                 if file == "pipeline.zip":
                     continue
                 file_path = os.path.join(root, file)
                 arcname = os.path.relpath(file_path, emd_package_dir)
+                # Skip if it's already from pipeline directory (handled above)
                 if arcname.startswith("pipeline"):
                     continue
-                arcname = os.path.join("pipeline","emd",arcname)
-                zipf.write(file_path, arcname)
+                # Add EMD files to pipeline/emd/ directory
+                emd_arcname = os.path.join("pipeline", "emd", arcname)
+                zipf.write(file_path, emd_arcname)
+        
         # Add cfn folder
         cfn_dir = os.path.join(emd_package_dir, "cfn")
         if os.path.exists(cfn_dir):
