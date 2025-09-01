@@ -33,7 +33,7 @@ def ziped_pipeline():
                     continue
                 file_path = os.path.join(root, file)
                 arcname = os.path.relpath(file_path, emd_package_dir)
-                if file_path.startswith("pipeline"):
+                if arcname.startswith("pipeline"):
                     continue
                 arcname = os.path.join("pipeline","emd",arcname)
                 zipf.write(file_path, arcname)
